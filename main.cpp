@@ -257,18 +257,42 @@ static void median(vector<float> iarr) {
         cout << "The medians of the numbers are " << med2 << " and " << med3 <<  endl;
     }
     }
-static void mode(vector<float> iarr) {
-      /*int temp=0; int n = iarr.size();
-      vector<float> v;
-        for (int i=0;i<n;++i) {
-          for (int j=i;j<n;++j) {
-            if (iarr[i]==iarr[j]) {
-              temp++;
+static void mode(vector<float> v) {
+    vector<int> v2; int temp=0;
+    for (int i=0;i<v.size();++i) {
+        temp = 0;
+        for (int j=i;j<v.size();++j) {
+            if (v[i] == v[j]) {
+                temp++;
             }
-          }
-          v.push_back(temp);
         }
-      cout << "The Mode of the numbers is ";*/
+        v2.push_back(temp);
+    }
+    for (auto i : v2) {
+    cout << i << " ";
+    }
+    cout << endl;
+    vector<int> v3;
+    int max = *max_element(v2.begin(),v2.end());
+    for (int i=0;i<v2.size();++i) {
+        if (max == v2[i]) {
+            v3.push_back(i);
+            continue;
+        }
+    }
+    for (auto i : v3) {
+        cout << i << " ";
+    }
+    cout << endl;
+    vector<int> v4;
+    for (int i=0;i<v3.size();++i) {
+        v4.push_back(v[v3[i]]);
+    }
+    cout << "The Mode of the numbers are [";
+    for (int i=0;i<v4.size();++i) {
+        cout << v4[i] << "," ;
+    }
+    cout << "]\n";
     }
 };
 void ctendancy(){
