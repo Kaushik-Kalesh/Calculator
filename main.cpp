@@ -161,74 +161,33 @@ void mensuration2(){
     int inp,inp2; char creply;
     area obj1; volume obj2;
     cout << "Select:\n";
-    cout << "1. Area\n";
-    cout << "2. Volume\n";
-    cout << "Enter: "; cin >> inp;
+    cout << "1. Area\n2. Volume\nEnter: "; cin >> inp;
     cout << "NOTE- Enter all values in centimeters(cm)\n";
-    cout << "Select:\n";
-    cout << "1. Cube\n";
-    cout << "2. Cuboid\n";
-    cout << "3. Cone\n";
-    cout << "4. Cylinder\n";
-    cout << "5. Frustum\n";
-    cout << "6. Hemi-sphere\n";
-    cout << "7. Sphere\n";
-    cout << "Enter: "; cin >> inp2;
-    cout << "Enter;\n" << "\n";
+    cout << "Select:\n1. Cube\n2. Cuboid\n3. Cone\n4. Cylinder\n5. Frustum\n6. Hemi-sphere\n7. Sphere\nEnter: "; cin >> inp2;
+    cout << "Enter;\n\n";
     if (inp==1){
-        if (inp2==1){
-            obj1.cube();
-        }
-        else if (inp2==2){
-            obj1.cuboid();
-        }
-        else if (inp2==3){
-            obj1.cone();
-        }
-        else if (inp2==4){
-            obj1.cylinder();
-        }
-        else if (inp2==5){
-            obj1.frustum();
-        }
-        else if (inp2==6){
-            obj1.hemisphere();
-        }
-        else {
-            obj1.sphere();
-        }
+        if (inp2==1){obj1.cube();}
+        else if (inp2==2){obj1.cuboid();}
+        else if (inp2==3){obj1.cone();}
+        else if (inp2==4){obj1.cylinder();}
+        else if (inp2==5){obj1.frustum();}
+        else if (inp2==6){obj1.hemisphere();}
+        else {obj1.sphere();}
     }
      else {
-        if (inp2==1){
-            obj2.cube();
-        }
-        else if (inp2==2){
-            obj2.cuboid();
-        }
-        else if (inp2==3){
-            obj2.cone();
-        }
-        else if (inp2==4){
-            obj2.cylinder();
-        }
-        else if (inp2==5){
-            obj2.frustum();
-        }
-        else if (inp2==6){
-            obj2.hemisphere();
-        }
-        else {
-            obj2.sphere();
-        }
+        if (inp2==1){obj2.cube();}
+        else if (inp2==2){obj2.cuboid();}
+        else if (inp2==3){obj2.cone();}
+        else if (inp2==4){obj2.cylinder();}
+        else if (inp2==5){obj2.frustum();}
+        else if (inp2==6){obj2.hemisphere();}
+        else {obj2.sphere();}
      }
 }
 void unit_converter(){
    string inp2,ainp; int inp;
    float inp3,inp4,f,c,mph,kph,celsius,fahrenheit;
-   cout << "I need to convert:\n";
-   cout << "1. SPEED UNITs\n";
-   cout << "2. TEMPERATURE UNITs\n";
-   cout << "Enter: "; cin >> inp;
+   cout << "I need to convert:\n1. SPEED UNITs\n2. TEMPERATURE UNITs\nEnter: "; cin >> inp;
    if (inp==1){
         cout << "I need to find {mph/kph}: "; cin >> inp2;
         string stemp1="mph",stemp2="kph";
@@ -267,19 +226,15 @@ void unit_converter(){
       cout << "Input is wrong!\n";
    }
 }
-class average{
-public:
-    average(int n, vector<float> iarr){
-    int i;
+class stats {
+static void average(vector<float> iarr) {
+    int i; int n = iarr.size();
     float sum,avg; 
     avg=accumulate(iarr.begin(),iarr.end(),0)/n;
     cout << "The average of the numbers is = " << avg << endl;
     }
-};
-class median{
-public:
-    median(int n, vector<float> iarr){
-    float i,j,k,l;
+static void median(vector<float> iarr) {
+    float i,j,k,l; int n = iarr.size();
     float med,med2,med3,val;
     for (i=0;i<n;++i){
         j=i;
@@ -302,11 +257,8 @@ public:
         cout << "The medians of the numbers are " << med2 << " and " << med3 <<  endl;
     }
     }
-};
-class mode{
-public:
-    mode(int n, vector<float> iarr){
-      /*int temp=0;
+static void mode(vector<float> iarr) {
+      /*int temp=0; int n = iarr.size();
       vector<float> v;
         for (int i=0;i<n;++i) {
           for (int j=i;j<n;++j) {
@@ -314,45 +266,33 @@ public:
               temp++;
             }
           }
-          v.push_back([iarr[i],temp]);
+          v.push_back(temp);
         }
-      sort(v.begin(),v.end());
-      cout << "The Mode of the numbers is " << v[n];*/
+      cout << "The Mode of the numbers is ";*/
     }
 };
 void ctendancy(){
    int inp,N; char creply;
    vector<float> v; float x;
    cout << "I want to calculate:\n";
-   cout << "1. Average\n";
-   cout << "2. Median\n";
-   cout << "3. Mode\n";
-   cout << "Enter: "; cin >> inp;
+   cout << "1. Average\n2. Median\n3. Mode\nEnter: "; cin >> inp;
    cout << "Enter the number of numbers: "; cin >> N;
    cout << "Enter the numbers:\n";
    for (int i=0;i<N;++i) {
      cin >> x;
      v.push_back(x);
    }
-   if (inp==1){
-        average avg(N,v);
-   }
-   else if (inp==2) {
-        median med(N,v);
-   }
-   else {
-        mode mod(N,v);
-   }
+   if (inp==1) {stats.average(v);}
+   else if (inp==2) {stats.median(v);}
+   else {stats.mode(v);}
 }
 void speedcalc(){
     float v,s,t;
     int creply1;
     cout << "Enter:\n";
-    cout << "1. SPEED\n";
-    cout << "2. DISTANCE\n";
-    cout << "3. TIME\n";
+    cout << "1. SPEED\n2. DISTANCE\n3. TIME\n";
     cout << "Enter your choice: "; cin >> creply1;
-    cout << "Note-Enter values only in kilometers and hours\n" << "\n";
+    cout << "Note-Enter values only in kilometers and hours\n\n";
     cout << "Enter;\n";
     if (creply1==1)
     {
@@ -404,17 +344,9 @@ int main(){
     do
     {
     cout << "I need to calculate:" << endl;
-    cout << "1. ADDITION/SUBTRACTION \n";
-    cout << "2. MULTIPLICATION\n";
-    cout << "3. DIVISION\n";
-    cout << "4. EXPONENTIATIONT\n";
-    cout << "5. ROOT\n";
-    cout << "6. CENTRAL TENDANCY\n";
-    cout << "7. UNIT CONVERTER\n";
-    cout << "8. SPEED CALCULATOR\n";
-    cout << "9. MENSURATION CALCULATOR\n";
-    cout << "10. INTEREST CALCULATOR\n";
-    cout << "11. QUADRATIC EQUATION SOLVER\n\n";
+    cout << "1. ADDITION/SUBTRACTION\n2. MULTIPLICATION\n3. DIVISION\n4. EXPONENTIATIONT\n5. ROOT\n";
+    cout << "6. CENTRAL TENDANCY\n7. UNIT CONVERTER\n8. SPEED CALCULATOR\n9. MENSURATION CALCULATOR\n";
+    cout << "10. INTEREST CALCULATOR\n11. QUADRATIC EQUATION SOLVER\n\n";
     cout << "Enter: "; cin >> n;
     cout << "\n";
     if ((n==1)||(n==2)){
@@ -452,24 +384,12 @@ int main(){
         x=pow(inp1,(1/inp2));
         cout << "The solution is = " << x << endl;
     }
-    else if (n==6){
-        ctendancy();
-    }
-    else if (n==7){
-        unit_converter();
-    }
-    else if (n==8){
-        speedcalc();
-    }
-    else if (n==9){
-        mensuration2();
-    }
-    else if (n==10){
-        interest_calc();
-    }
-    else if (n==11) {
-        QES();
-    }
+    else if (n==6){ctendancy();}
+    else if (n==7){unit_converter();}
+    else if (n==8){speedcalc();}
+    else if (n==9){mensuration2();}
+    else if (n==10){interest_calc();}
+    else if (n==11) {QES();}
     else{
         cout << "Input is wrong!" << endl;
     }
