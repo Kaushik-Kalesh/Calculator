@@ -38,10 +38,10 @@ public:
         cout << setw(10) << "2. TSA\n";
         cout << "Enter: "; cin >> inp;
         if (inp==1){
-            cout << "LSA of given cube is = " << float(4)*a << " cm2" << endl;
+            cout << "LSA of given cube is = " << float(4)*a << " cm²" << endl;
         }
         else {
-            cout << "TSA of given cube is = " << float(6)*a << " cm2" << endl;
+            cout << "TSA of given cube is = " << float(6)*a << " cm²" << endl;
         }
     }
     void cuboid(){
@@ -53,10 +53,10 @@ public:
         cout << setw(10) << "2. TSA\n";
         cout << "Enter: "; cin >> inp;
         if (inp==1){
-            cout << "LSA of given cuboid is = " << float(2)*h* (l+b) << " cm2" << endl;
+            cout << "LSA of given cuboid is = " << float(2)*h* (l+b) << " cm²" << endl;
         }
         else {
-            cout << "TSA of given cuboid is = " << float(2)* (l*b+b*h+l*h) << " cm2" << endl;
+            cout << "TSA of given cuboid is = " << float(2)* (l*b+b*h+l*h) << " cm²" << endl;
         }
     }
     void cone(){
@@ -67,10 +67,10 @@ public:
         cout << setw(10) << "2. TSA\n";
         cout << "Enter: "; cin >> inp;
         if (inp==1){
-            cout << "LSA of given cone is = " << pi*r*l << " cm2" << endl;
+            cout << "LSA of given cone is = " << pi*r*l << " cm²" << endl;
         }
         else {
-            cout << "TSA of given cone is = " << pi*r* (r+l) << " cm2" << endl;
+            cout << "TSA of given cone is = " << pi*r* (r+l) << " cm²" << endl;
         }
     }
     void cylinder(){
@@ -81,10 +81,10 @@ public:
         cout << setw(10) << "2. TSA\n";
         cout << "Enter: "; cin >> inp;
         if (inp==1){
-            cout << "LSA of given cylinder is = " << float(2)*pi*r*h << " cm2" << endl;
+            cout << "LSA of given cylinder is = " << float(2)*pi*r*h << " cm²" << endl;
         }
         else {
-            cout << "TSA of given cylinder is = " << float(2)*pi*r* (r+h) << " cm2" << endl;
+            cout << "TSA of given cylinder is = " << float(2)*pi*r* (r+h) << " cm²" << endl;
         }
     }
     void frustum(){
@@ -96,10 +96,10 @@ public:
         cout << setw(10) << "2. TSA\n";
         cout << "Enter: "; cin >> inp;
         if (inp==1){
-            cout << "LSA of given cone is = " << pi * l * (R + r) << " cm2" << endl;
+            cout << "LSA of given frustum is = " << pi * l * (R + r) << " cm²" << endl;
         }
         else {
-            cout << "TSA of given cone is = " << pi * l * (R + r) + pi * (r * r + R * R) << " cm2" << endl;
+            cout << "TSA of given frustum is = " << pi * l * (R + r) + pi * (r * r + R * R) << " cm²" << endl;
         }
     }
     void hemisphere(){
@@ -109,52 +109,52 @@ public:
         cout << setw(10) << "2. TSA\n";
         cout << "Enter: "; cin >> inp;
         if (inp==1){
-            cout << "LSA of given hemi-sphere is = " << float(2)*pi*r*r << " cm2" << endl;
+            cout << "LSA of given hemi-sphere is = " << float(2)*pi*r*r << " cm²" << endl;
         }
         else {
-            cout << "TSA of given hemi-sphere is = " << float(3)*pi*r*r << " cm2" << endl;
+            cout << "TSA of given hemi-sphere is = " << float(3)*pi*r*r << " cm²" << endl;
         }
     }
     void sphere(){
         cout << setw(10) << "Radius = "; cin >> r;
-        cout << "The Area of the Sphere is = " << float(4)*pi*r*r << " cm2" << endl;
+        cout << "The Area of the Sphere is = " << float(4)*pi*r*r << " cm²" << endl;
     }
 };
 class volume:public mensuration{
 public:
     void cube(){
         cout << "Side length = "; cin >> a;
-        cout << "The volume of given cube is = " << a*a*a << " cm3" << endl;
+        cout << "The volume of given cube is = " << a*a*a << " cm³" << endl;
     }
     void cuboid(){
         cout << "Length = "; cin >> l;
         cout << "Width = "; cin >> b;
         cout << "Height = "; cin >> h;
-        cout << "The volume of given cuboid is = " << l*b*h << " cm3" << endl;
+        cout << "The volume of given cuboid is = " << l*b*h << " cm³" << endl;
     }
     void cone(){
         cout << "Base Radius = "; cin >> r;
         cout << "Height = "; cin >> h;
-        cout << "The volume of given cone is = " << float(1)/float(3) *pi*r*r*h << " cm3" << endl;
+        cout << "The volume of given cone is = " << float(1)/float(3) *pi*r*r*h << " cm³" << endl;
     }
     void cylinder(){
         cout << "Base Radius = "; cin >> r;
         cout << "Height = "; cin >> h;
-        cout << "The volume of given cylinder is = " << pi*r*r*h << " cm3" << endl;
+        cout << "The volume of given cylinder is = " << pi*r*r*h << " cm³" << endl;
     }
     void frustum(){
         cout << "Base Radius-1 = "; cin >> r;
         cout << "Base Radius-2 = "; cin >> R;
         cout << "Height = "; cin >> h;
-        cout << "The volume of given frustum is = " << (float(1) / float(3)) * pi * h * (r * r + R * R + r * R) << " cm3" << endl;
+        cout << "The volume of given frustum is = " << (float(1) / float(3)) * pi * h * (r * r + R * R + r * R) << " cm³"  << endl;
     }
     void hemisphere(){
         cout << "Radius = "; cin >> r;
-        cout << "The volume of given hemi-sphere is = " << (float(2)/float(3)) *pi*r*r*r << " cm3" << endl;
+        cout << "The volume of given hemi-sphere is = " << (float(2)/float(3)) *pi*r*r*r << " cm³" << endl;
     }
     void sphere(){
         cout << "Radius = "; cin >> r;
-        cout << "The volume of given sphere is = " << (float(4)/float(3)) *pi*r*r*r << " cm3" << endl;
+        cout << "The volume of given sphere is = " << (float(4)/float(3)) *pi*r*r*r << " cm³" << endl;
     }
 };
 void mensuration2(){
@@ -210,7 +210,7 @@ void unit_converter(){
       string stemp1="celsius",stemp2="fahrenheit";
       if (ainp==stemp1){
             cout << setw(10) << "fahrenheit = " << setw(10); cin >> f;
-            celsius=(f-32)* 5/9;
+            celsius=(f-32)*(5/9);
             cout << setw(10) << "celsius = " << celsius << endl;
       }
       else if (ainp==stemp2){
@@ -227,6 +227,8 @@ void unit_converter(){
    }
 }
 class stats {
+public:
+
 static void average(vector<float> iarr) {
     int i; int n = iarr.size();
     float sum,avg; 
@@ -258,6 +260,7 @@ static void median(vector<float> iarr) {
     }
     }
 static void mode(vector<float> v) {
+    sort(v.begin(),v.end());
     vector<int> v2; int temp=0;
     for (int i=0;i<v.size();++i) {
         temp = 0;
@@ -268,10 +271,6 @@ static void mode(vector<float> v) {
         }
         v2.push_back(temp);
     }
-    for (auto i : v2) {
-    cout << i << " ";
-    }
-    cout << endl;
     vector<int> v3;
     int max = *max_element(v2.begin(),v2.end());
     for (int i=0;i<v2.size();++i) {
@@ -280,19 +279,20 @@ static void mode(vector<float> v) {
             continue;
         }
     }
-    for (auto i : v3) {
-        cout << i << " ";
-    }
-    cout << endl;
     vector<int> v4;
     for (int i=0;i<v3.size();++i) {
         v4.push_back(v[v3[i]]);
     }
-    cout << "The Mode of the numbers are [";
-    for (int i=0;i<v4.size();++i) {
-        cout << v4[i] << "," ;
+    if (v4.size() != 1) {
+       cout << "The Mode of the numbers are [";
+       for (int i=0;i<v4.size()-1;++i) {
+           cout << v4[i] << "," ;
+       }
+       cout << v4[v4.size()-1] << "]\n";
     }
-    cout << "]\n";
+    else {
+       cout << "The Mode of the numbers is " << v4[0] << endl;
+    }
     }
 };
 void ctendancy(){
@@ -306,9 +306,9 @@ void ctendancy(){
      cin >> x;
      v.push_back(x);
    }
-   if (inp==1) {stats.average(v);}
-   else if (inp==2) {stats.median(v);}
-   else {stats.mode(v);}
+   if (inp==1) {stats::average(v);}
+   else if (inp==2) {stats::median(v);}
+   else {stats::mode(v);}
 }
 void speedcalc(){
     float v,s,t;
@@ -351,12 +351,12 @@ void QES() {
       float i_discriminant  = sqrt(1 - discriminant);
       float part1 = -b/float(2*a);
       float part2 = i_discriminant/float(2*a); 
-      cout << "\nThe Roots of the equation[" << a << "x^2 + " << b << "x + " << c << "] are (" <<  (part1) << " + " << (part2) << "i) and (" << (part1) << " - " << (part2) << "i) \n";
+      cout << "\nThe Roots of the equation [" << a << "x² + " << b << "x + " << c << "] are (" << fixed << setprecision(2) << (part1) << " + " << fixed << setprecision(2) << (part2) << "i) and (" << fixed << setprecision(2) << (part1) << " - " << fixed << setprecision(2) << (part2) << "i) \n";
   }
   else {
       root1 = (-b + sqrt(discriminant))/float(2*a);
       root2 = (-b - sqrt(discriminant))/float(2*a);
-      cout << "\nThe Roots of the equation[" << a << "x^2 + " << b << "x + " << c << "] are (" << root1 << ") and (" << root2 << ")\n";
+      cout << "\nThe Roots of the equation [" << a << "x² + " << b << "x + " << c << "] are (" << fixed << setprecision(2) << root1 << ") and (" << fixed << setprecision(2) << root2 << ")\n";
   }
 }
 int main(){
@@ -389,7 +389,7 @@ int main(){
     }
      cout << "The solution is = " << x << endl;
     }
-    else if (n==3) {
+    else if (n==3){
         float a,b;
         cout << "Enter 2 numbers: "; cin >> a >> b;
         cout << "The Solution is = " << (a/b) << endl;
@@ -401,7 +401,7 @@ int main(){
         x=pow(inp1,inp2);
         cout << "The solution is = " << x << endl;
     }
-    else if (n==5) {
+    else if (n==5){
         float inp1,inp2;
         cout << "Enter the number: "; cin >> inp1;
         cout << "Enter the root number(n): "; cin >> inp2;
@@ -413,11 +413,11 @@ int main(){
     else if (n==8){speedcalc();}
     else if (n==9){mensuration2();}
     else if (n==10){interest_calc();}
-    else if (n==11) {QES();}
+    else if (n==11){QES();}
     else{
         cout << "Input is wrong!" << endl;
     }
     cout << "\nDo you want to continue(y/n)?\n";
     cin >> creply;
-} while ((creply!='n')||(creply!='N'));
+} while (creply!='n');
 }
