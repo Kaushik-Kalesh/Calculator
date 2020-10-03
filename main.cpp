@@ -228,37 +228,13 @@ void unit_converter(){
 }
 class stats {
 public:
-
-static void average(vector<float> iarr) {
-    int i; int n = iarr.size();
-    float sum,avg; 
-    avg=accumulate(iarr.begin(),iarr.end(),0)/n;
-    cout << "The average of the numbers is = " << avg << endl;
+static void average(vector<float> v) {
+    cout << "The average of the numbers is = " << (accumulate(v.begin(),v.end(),0.0))/(v.size()) << endl;
     }
-static void median(vector<float> iarr) {
-    float i,j,k,l; int n = iarr.size();
-    float med,med2,med3,val;
-    for (i=0;i<n;++i){
-        j=i;
-        j=(n-1)/2;
-        med=iarr[j];
-    }
-    for (j=0;j<n;++j){
-        med2=iarr[j];
-        k=i;
-        k=(n-2)/2;
-        med2=iarr[k];
-        l=k+1;
-        med3=iarr[l];
-    }
-    val=n%2;
-    if (val!=0){
-        cout << "The median of the numbers is " << med << endl;
-    }
-    else{
-        cout << "The medians of the numbers are " << med2 << " and " << med3 <<  endl;
-    }
-    }
+static void median(vector<float> v) {
+    if (v.size()%2 != 0) cout << "The Median of the numbers is " << v[(v.size()-1)/2] << endl;
+    else cout << "The Median of the numbers are " << v[(v.size()-2)/2] << " and " << v[(v.size()+1)/2] << endl;
+   }
 static void mode(vector<float> v) {
     sort(v.begin(),v.end());
     vector<int> v2; int temp=0;
