@@ -232,8 +232,29 @@ static void average(vector<float> v) {
     cout << "The average of the numbers is = " << (accumulate(v.begin(),v.end(),0.0))/(v.size()) << endl;
     }
 static void median(vector<float> v) {
-    if (v.size()%2 != 0) cout << "The Median of the numbers is " << v[(v.size()-1)/2] << endl;
-    else cout << "The Median of the numbers is " << (v[(v.size()-2)/2])+(v[(v.size()+1)/2])/2 << endl;
+    sort(v.begin(),v.end());
+    float i,j,k,l; int n = v.size();
+    float med,med2,med3,val;
+    for (i=0;i<n;++i){
+        j=i;
+        j=(n-1)/2;
+        med=v[j];
+    }
+    for (j=0;j<n;++j){
+        med2=v[j];
+        k=i;
+        k=(n-2)/2;
+        med2=v[k];
+        l=k+1;
+        med3=v[l];
+    }
+    val=n%2;
+    if (val!=0){
+        cout << "The median of the numbers is " << med << endl;
+    }
+    else{
+        cout << "The medians of the numbers is " << (med2 + med3)/2 <<  endl;
+    }
    }
 static void mode(vector<float> v) {
     sort(v.begin(),v.end());
