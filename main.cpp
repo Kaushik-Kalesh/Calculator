@@ -233,7 +233,7 @@ static void average(vector<float> v) {
     }
 static void median(vector<float> v) {
     if (v.size()%2 != 0) cout << "The Median of the numbers is " << v[(v.size()-1)/2] << endl;
-    else cout << "The Median of the numbers are " << v[(v.size()-2)/2] << " and " << v[(v.size()+1)/2] << endl;
+    else cout << "The Median of the numbers is " << (v[(v.size()-2)/2])+(v[(v.size()+1)/2])/2 << endl;
    }
 static void mode(vector<float> v) {
     sort(v.begin(),v.end());
