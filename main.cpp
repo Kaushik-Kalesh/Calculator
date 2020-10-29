@@ -226,12 +226,11 @@ void unit_converter(){
       cout << "Input is wrong!\n";
    }
 }
-class stats {
-public:
-static void mean(vector<float> v) {
+namespace stats {
+void mean(vector<float> v) {
     cout << "The average of the numbers is = " << (accumulate(v.begin(),v.end(),0.0))/(v.size()) << endl;
     }
-static void median(vector<float> v) {
+void median(vector<float> v) {
     sort(v.begin(),v.end());
     float i,j,k,l; int n = v.size();
     float med,med2,med3,val;
@@ -256,7 +255,7 @@ static void median(vector<float> v) {
         cout << "The medians of the numbers is " << (med2 + med3)/2 <<  endl;
     }
    }
-static void mode(vector<float> v) {
+void mode(vector<float> v) {
     sort(v.begin(),v.end());
     vector<int> v2; int temp=0;
     for (int i=0;i<v.size();++i) {
@@ -303,9 +302,10 @@ void ctendancy(){
      cin >> x;
      v.push_back(x);
    }
-   if (inp==1) {stats::mean(v);}
-   else if (inp==2) {stats::median(v);}
-   else {stats::mode(v);}
+   using namespace stats;
+   if (inp==1) {mean(v);}
+   else if (inp==2) {median(v);}
+   else {mode(v);}
 }
 void speedcalc(){
     float v,s,t;
