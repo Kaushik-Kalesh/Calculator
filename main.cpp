@@ -228,7 +228,7 @@ void unit_converter(){
 }
 class stats {
 public:
-static void average(vector<float> v) {
+static void mean(vector<float> v) {
     cout << "The average of the numbers is = " << (accumulate(v.begin(),v.end(),0.0))/(v.size()) << endl;
     }
 static void median(vector<float> v) {
@@ -303,7 +303,7 @@ void ctendancy(){
      cin >> x;
      v.push_back(x);
    }
-   if (inp==1) {stats::average(v);}
+   if (inp==1) {stats::mean(v);}
    else if (inp==2) {stats::median(v);}
    else {stats::mode(v);}
 }
